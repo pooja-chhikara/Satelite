@@ -56,7 +56,8 @@ def on_mouse_down(pos):
             if nextSatelite:
                 lines.append((satelites[nextSatelite-1].pos, satelites[nextSatelite].pos))
                 print(lines)
-                nextSatelite+=1
+                # make sure we will increase the next satelite else it wont find first one at all 
+            nextSatelite+=1
             else:
                 nextSatelite = 0
                 lines = []
